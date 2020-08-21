@@ -7,6 +7,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <title>Login</title>
+	
 </head>
 <body class="bg-light">
 	<%
@@ -18,13 +19,12 @@
 	<%
 		}
 	%>
-	
 	<jsp:include page="indexnavbar.jsp" flush="true" />
 	
-
-	<div class="container shadow-lg bg-white mx-auto"
-		style="margin-top: 20%; max-width: 300px">
+	<div class= "columns is-desktop is-vcentered container shadow-lg bg-white mx-auto"
+		style="top: 49px; vertical-align: middle; text-align:center; margin: auto; max-width: 300px">
 		<!-- Login Form -->
+		
 		<form class="mx-auto" method="POST" action="./login">
 			<div class="form-group">
 				<label class="label mx-auto font-weight-bolder text-center">LOGIN</label><br>
@@ -32,15 +32,16 @@
 					placeholder="username" required><br> 
 					<input class="mx-auto" style="margin-top: 5px" type="password" name="pass"
 					placeholder="password" required><br>
-				<button class="btn btn-success" style="margin-top: 5px"
+				<button class="button is-light" style="margin-top: 5px"
 					type="submit">Log In</button>
 			</div>
 		</form>
 		<!-- Sign Up -->
 		<div class="mx-auto" style="padding-bottom: 5px">
-			<a href="signup.jsp"><button class="btn btn-info">SignUp</button></a>
+			<a href="signup.jsp"><button class="button is-primary">Sign Up</button></a>
 		</div>
-		<div class="mx-auto"></div>
 	</div>
 </body>
-</html>
+	<jsp:include page="footer.jsp" flush="true" />
+<!-- 
+</html> -->

@@ -15,7 +15,8 @@ public class CustomerDAOimpl implements CustomerDAO<Customer> {
         Customer c = null; 
         try{
         	c = new Customer();
-            PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement("SELECT * FROM customer WHERE id=? and visible=1");
+            PreparedStatement ps = ConnectionFactory.getConnection()
+            		.prepareStatement("SELECT * FROM customer WHERE id=? and visible=1");
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
@@ -64,7 +65,9 @@ public class CustomerDAOimpl implements CustomerDAO<Customer> {
     @Override
     public void create(Customer c) {
         try{
-        PreparedStatement ps = ConnectionFactory.getConnection().prepareStatement("INSERT INTO customer (firstname, lastname, username, password, address, mobile) VALUES (?,?,?,?,?,?)");
+        PreparedStatement ps = ConnectionFactory.getConnection()
+        		.prepareStatement("INSERT INTO customer (firstname, lastname, username,"
+        				+ "password, address, mobile) VALUES (?,?,?,?,?,?)");
         ps.setString(1, c.getFirstName());
         ps.setString(2, c.getLastName());
         ps.setString(3, c.getUserName());

@@ -48,7 +48,8 @@ public class Signup extends HttpServlet {
 
 		//Check for if customer username and mobile contact number is valid.
 		//get method to search input
-		if(userDAOImpl.get(request.getParameter("username"))==null & userDAOImpl.get(request.getParameter("mobile"))==null){
+		if(userDAOImpl.get(request.getParameter("username"))==null 
+				& userDAOImpl.get(request.getParameter("mobile"))==null){
 			request.getSession().invalidate();
 			request.getSession(true);
 			request.getSession().setAttribute("accountExists", true);
@@ -57,19 +58,18 @@ public class Signup extends HttpServlet {
 			//Set customer/user fields with request param input and 
 			//use helper class to create and add customer
 			Customer c = new Customer();
-			c.setFirstName(request.getParameter("firstName"));
-			c.setLastName(request.getParameter("lastName"));
+			c.setFirstName(request.getParameter("firstname"));
+			c.setLastName(request.getParameter("lastname"));
 			c.setUserName(request.getParameter("username"));
 			c.setPassword(request.getParameter("pass1"));
 			c.setAddress(request.getParameter("address"));
 			c.setContactNumber(request.getParameter("mobile"));
 			userDAOImpl.create(c); 
-
-
 			//create saving account using customer credentials
 			c = userDAOImpl.get(request.getParameter("username"));
 			Account a = new SavingsAccount();
 			a.setUserId(c.getId());
+			
 			a.setBalance(Float.valueOf(request.getParameter("balance")));
 			acctDAOImpl.create(a);
 			a = acctDAOImpl.get(c.getId());
@@ -86,8 +86,6 @@ public class Signup extends HttpServlet {
 			t.setAmount(a.getBalance()); //Investigate and test
 			t.setRemainingBalance(a.getBalance());
 			transDAOImpl.create(t); 
-
-
 		}
 		response.sendRedirect(send);
 

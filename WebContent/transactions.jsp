@@ -27,7 +27,7 @@
 		%>
 			<body>
 				<jsp:include page="navbar.jsp" flush="true" />
-				<div class="container" style="margin-top:75px">
+				<div class="container" style="margin-top: 350px;">
 					<form method="post" action="./transactions">
 						<h3 class="mx-auto"><%=c.getFirstName()+" "+c.getLastName() %> Transactions</h3>
 						<table class="table table-borderless">
@@ -70,4 +70,4 @@
 		response.sendRedirect("login.jsp");
 	}
 %>
-</html>
+<jsp:include page="footer.jsp" flush="true" />

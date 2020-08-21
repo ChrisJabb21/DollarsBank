@@ -5,20 +5,22 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
+<body>
+
 <% 
 	if(session.getAttribute("customer")!=null) {
 		Customer c = (Customer)session.getAttribute("customer");
 		String name = new String(c.getFirstName()+" "+c.getLastName());
 		%>
-			<body>
-				<jsp:include page="navbar.jsp" flush="true" />
-				<div class="mx-auto container" style="margin-top:75px">
+			<jsp:include page="navbar.jsp"  />
+			
+				<div class="mx-auto container" style="margin-top: 351px;">
 					<h3 class="mx-auto">Welcome <%=name%>!</h3>
-					<p>Thank you for choosing Dollars Bank today! To see your recent transaction history,
-					go to your checking or savings accounts. Deposits, withdrawals, and transfers can be 
-					done through these accounts.</p>
+					<p>Thank you for choosing Dollars Bank today! To see your recent transaction history, make deposits or withdrawals, 
+					go to your checking or savings accounts.</p>
 				</div>
 			</body>
 		<%
@@ -26,4 +28,4 @@
 		response.sendRedirect("login.jsp");
 	}
 %>
-</html>
+<jsp:include page="footer.jsp" flush="true" />

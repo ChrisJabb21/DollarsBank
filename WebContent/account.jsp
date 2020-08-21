@@ -12,9 +12,10 @@
 		Customer c = (Customer)session.getAttribute("customer");
 		%>
 			<body>
-				<jsp:include page="navbar.jsp" flush="true" />
-				<div class="container" style="margin-top:75px">
-					<form method="post" action="./UserEdit">
+			<jsp:include page="navbar.jsp" flush="true" />
+			
+				<div class="container" style="margin-top: 351px;">
+					<form method="post" action="./edit">
 						<table class="table table-borderless">
 							<tr><td>First Name</td><td><input type="text" name="firstName" value="<%=c.getFirstName() %>" required></td></tr>
 							<tr><td>Last Name</td><td><input type="text" name="lastName" value="<%=c.getLastName() %>" required></td></tr>
@@ -33,4 +34,4 @@
 		response.sendRedirect("login.jsp");
 	}
 %>
-</html>
+<jsp:include page="footer.jsp" flush="true" />

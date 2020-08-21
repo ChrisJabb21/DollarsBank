@@ -9,14 +9,7 @@
 <%@page import="com.dollarsbank.model.Account"%>
 <%@page import="com.dollarsbank.model.SavingsAccount"%>
 <%@page import="com.dollarsbank.dao.AccountDAO"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
 <title>Savings</title>
-</head>
 <%
 	if(session.getAttribute("customer")!=null) {
 		AccountDAO<Account> acctDAO = new AccountDAOImpl();
@@ -28,7 +21,7 @@
 		%>
 			<body>
 				<jsp:include page="navbar.jsp" flush="true" />
-				<div class="container" style="margin-top:75px">
+				<div class="container" style="margin-top: 351px;">
 					<table class="table table-borderless">
 						<tr><td><%=c.getFirstName() %>'s Savings Account</td><td>Account ID: <%=acc.getId() %></td><td>Current Balance: <%=fmt.format(acc.getBalance()) %></td></tr>
 					</table>
@@ -59,4 +52,4 @@
 		response.sendRedirect("login.jsp");
 	}
 %>
-</html>
+<jsp:include page="footer.jsp" flush="true" />

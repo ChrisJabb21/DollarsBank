@@ -31,7 +31,7 @@
 							<span class="input-group-text"> <i class="fa fa-user"></i>
 							</span>
 						</div>
-						<input name="firstName" class="form-control"
+						<input name="firstname" class="form-control"
 							placeholder="First name" type="text" required>
 					</div>
 					<div class="form-group input-group">
@@ -39,13 +39,13 @@
 							<span class="input-group-text"> <i class="fa fa-user"></i>
 							</span>
 						</div>
-						<input name="lastName" class="form-control"
+						<input name="lastname" class="form-control"
 							placeholder="Last name" type="text" required>
 					</div>
 					<!-- form-group// -->
 					<div class="form-group input-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"> <i class="fa fa-address"></i>
+							<span class="input-group-text"><i class="fas fa-globe"></i>
 							</span>
 						</div>
 						<input name="address" type="text" class="form-control"
@@ -63,7 +63,7 @@
 					<!-- form-group// -->
 					<div class="form-group input-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"> <i class="fa fa-float"></i>
+							<span class="input-group-text"><i class="fas fa-money-check-alt"></i>
 							</span>
 						</div>
 						<input name="balance" class="form-control"
@@ -72,7 +72,7 @@
 					<!-- form-group// -->
 					<div class="form-group input-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"> <i class="fa fa-building"></i>
+							<span class="input-group-text"> <i class="fas fa-user"></i>
 							</span>
 						</div>
 						<input name="username" id="username" class="form-control" placeholder="User name"
@@ -85,9 +85,11 @@
 							</span>
 						</div>
 						<input name="pass1" id="pwd1" class="form-control"
-							placeholder="Create password" type="password" pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$" 
-							onchange="this.setCustomValidity(this.validity.patternMismatch ? 
-							'Must have at least 8 characters (1 uppercase, 1 lowercase, 1 special character)' : '');" required>
+							placeholder="Create password" type="password" 
+							pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$" 
+							onchange="this.setCustomValidity(this.validity.patternMismatch
+							 ? 'Must have at least 8 characters (1 uppercase, 1 lowercase,
+							  1 special character)' : '');" required>
 					</div>
 					<!-- form-group// -->
 					<div class="form-group input-group">
@@ -96,7 +98,8 @@
 							</span>
 						</div>
 						<input name="pass2" id="pwd2" class="form-control"
-							placeholder="Repeat password" type="password" pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$" 
+							placeholder="Repeat password" type="password" 
+							pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$" 
 							onchange="form.pass1.pattern != this.value ? 
 							'Please enter the same Password as above' : '';" required>
 					</div>
