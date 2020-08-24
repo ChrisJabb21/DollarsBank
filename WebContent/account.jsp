@@ -14,7 +14,10 @@
 			<body>
 			<jsp:include page="navbar.jsp" flush="true" />
 			
-				<div class="container" style="margin-top: 351px;">
+				<div class="container" style="margin-top: 200px;">
+				<div>
+			<h1>Account information</h1>
+			</div>
 					<form method="post" action="./edit">
 						<table class="table table-borderless">
 							<tr><td>First Name</td><td><input type="text" name="firstName" value="<%=c.getFirstName() %>" required></td></tr>
@@ -24,7 +27,7 @@
 							<tr><td>Address</td><td><input type="text" name="address" value="<%=c.getAddress() %>" required></td></tr>
 							<tr><td>Phone Number</td><td><input type="tel" name="mobile" value="<%=c.getContactNumber() %>" required></td></tr>
 							<tr><td>Customer Since</td><td><%=c.getDate() %></td></tr>
-							<tr><td></td><td><input class="btn btn-info" type="submit" value="Edit"></td></tr>
+							<tr><td></td><td><input class="btn btn-info" style="max-width:25%;" type="submit" value="Update"></td></tr>
 						</table>
 					</form>
 				</div>

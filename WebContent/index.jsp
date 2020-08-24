@@ -17,10 +17,13 @@
 		%>
 			<jsp:include page="navbar.jsp"  />
 			
-				<div class="mx-auto container" style="margin-top: 351px;">
+				<div class="mx-auto container" style="margin-top: 200px;">
+				<div>
+			<h1>Home</h1>
+			</div>
 					<h3 class="mx-auto">Welcome <%=name%>!</h3>
-					<p>Thank you for choosing Dollars Bank today! To see your recent transaction history, make deposits or withdrawals, 
-					go to your checking or savings accounts.</p>
+					<p> To see your recent transaction history, make deposits or withdrawals, update your contact information,
+					navigate to your savings account.</p>
 				</div>
 			</body>
 		<%

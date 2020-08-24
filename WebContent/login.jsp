@@ -7,7 +7,12 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <title>Login</title>
+	<style>
+	button{
+    display:inline-block;
+}
 	
+	</style>
 </head>
 <body class="bg-light">
 	<%
@@ -32,16 +37,16 @@
 					placeholder="username" required><br> 
 					<input class="mx-auto" style="margin-top: 5px" type="password" name="pass"
 					placeholder="password" required><br>
-				<button class="button is-light" style="margin-top: 5px"
-					type="submit">Log In</button>
+							<div class="mx-auto" style="padding-bottom: 5px">
+					
+				<a href="login.jsp"><button class="button is-light" style="margin-top: 5px"
+					type="submit">Log In</button></a>
+					<!-- Sign Up -->
+			<a href="signup.jsp"><button class="button is-primary" style="margin-top: 5px">Sign Up</button></a>
+		</div>		
 			</div>
 		</form>
-		<!-- Sign Up -->
-		<div class="mx-auto" style="padding-bottom: 5px">
-			<a href="signup.jsp"><button class="button is-primary">Sign Up</button></a>
-		</div>
+		
 	</div>
 </body>
 	<jsp:include page="footer.jsp" flush="true" />
-<!-- 
-</html> -->

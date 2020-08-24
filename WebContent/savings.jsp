@@ -21,7 +21,8 @@
 		%>
 			<body>
 				<jsp:include page="navbar.jsp" flush="true" />
-				<div class="container" style="margin-top: 351px;">
+				<div class="container" style="margin-top: 200px;">
+				<h1>Savings account</h1>
 					<table class="table table-borderless">
 						<tr><td><%=c.getFirstName() %>'s Savings Account</td><td>Account ID: <%=acc.getId() %></td><td>Current Balance: <%=fmt.format(acc.getBalance()) %></td></tr>
 					</table>
