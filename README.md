@@ -2,7 +2,7 @@
 A Java web app of a banking app made with Servlets and JSP model architecture and technologies and MySQL. 
 Bootstrap and Bulma CSS frameworks were used for styling.
 
-project was launched and tested with Tomcat v8.5 server configuration for running application. You will alos need to create database and tables.
+project was launched and tested with Tomcat v8.5 web server configuration for running application. You will also need to create database and tables.
 
 
 Resource list on J2EE technologies. 
