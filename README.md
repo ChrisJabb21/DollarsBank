@@ -1,4 +1,4 @@
-# J2EE-banking-web-app
+# DollarsBank-banking-web-app
 A Java web app of a banking app made with Servlets and JSP model architecture and technologies and MySQL. 
 Bootstrap and Bulma CSS frameworks were used for styling.
 
